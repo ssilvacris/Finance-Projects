@@ -20,3 +20,7 @@ The exercises came from DataCamp course plataform.
 ## Financial Concepts
 
 Some exercises about basic principles of finance essential for making important financial decisions.
+
+## Time Series
+Exercises about time series, using ARMA approach to predict climate change.
+
