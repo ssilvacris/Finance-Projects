@@ -1,4 +1,9 @@
-# Finance-bank_teller
+# Finance exercises
+This repository contains several exercises in Python and R, mainly in the area of finance, financial modeling and statistics.
+
+
+
+## Finance-bank_teller
 A system that emulates the transactions that are carried out by either a bank teller or an ATM machine.
 I did this project on codecademy site. It was implemented the following five features:
 
