@@ -12,3 +12,8 @@ Allow the customer to make a deposit to their bank account
 Allow the customer to make a withdrawal to their bank account
 Allow the customer to decide whether to make the transaction with checking or savings account
 Allow the customer to make a transfer between savings and checking account
+
+
+## Statistical Thinking in Python
+The exercises came from DataCamp course plataform.
+
