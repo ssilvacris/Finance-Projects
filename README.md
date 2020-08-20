@@ -27,3 +27,7 @@ Exercises about time series, using ARMA approach to predict climate change.
 The examples are from DataCamp course.
 
 
+## Present Value of Liabilities and Funding Ratio
+
+Exercise from Coursera course that presents how to discount future liabilities to compute the present value of future liabilities, and measure the funding ratio.
+
