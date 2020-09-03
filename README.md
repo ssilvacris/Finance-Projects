@@ -1,7 +1,9 @@
 # Finance exercises
 This repository contains several exercises in Python and R, mainly in the area of finance, financial modeling and statistics.
 
+## Credit Card Approval
 
+A project about automatic credit card approval predictor using machine learning techniques. I did this project on DataCamp platform.
 
 ## Finance- bank teller
 A system that emulates the transactions that are carried out by either a bank teller or an ATM machine.
