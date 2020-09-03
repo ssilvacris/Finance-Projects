@@ -33,5 +33,5 @@ The examples are from DataCamp course.
 
 Exercise from Coursera course that presents how to discount future liabilities to compute the present value of future liabilities, and measure the funding ratio.
 
-## MEDIUM-002
-How to use Ipywidgets to visualize future value with different tax rates.
+## Python and Ipywidgets to visualize future value with different tax rate
+How to use Ipywidgets to visualize future value with different tax rates. You can see my article [here](https://bit.ly/352l9mc)
