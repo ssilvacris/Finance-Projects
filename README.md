@@ -35,3 +35,6 @@ Exercise from Coursera course that presents how to discount future liabilities t
 
 ## Python and Ipywidgets to visualize future value with different tax rate
 How to use Ipywidgets to visualize future value with different tax rates. You can see my article [here](https://bit.ly/352l9mc).
+
+## Visualizing Tech Stocks 
+The Visualizing Tech Stocks is a project from Codecademy site. In this project the top 5 highest valued technology stocks were analyzed and visualized , as of the end of the first half of 2019: Microsoft (NASDAQ:MSFT), Amazon (NASDAQ:AMZN), Apple (NASDAQ:AAPL), Alphabet (NASDAQ:GOOG), and Facebook (NASDAQ:FB).
