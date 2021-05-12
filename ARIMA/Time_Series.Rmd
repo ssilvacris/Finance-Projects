@@ -1,0 +1,179 @@
+---
+title: "Time Series - AR, MA, ARMA & ARIMA"
+output: html_notebook
+---
+```{r}
+install.packages("devtools")
+```
+```{r}
+install.packages("forecast")
+```
+
+
+```{r}
+#load packages
+library(IRdisplay)
+library(magrittr)
+library(tidyverse)
+library(scales)
+library(gridExtra)
+library(forecast)
+library(tseries)
+library(ggthemes)
+```
+
+Load the file
+
+```{r}
+nflx <- read_csv("NFLX.csv")
+head(nflx)
+```
+
+
+```{r}
+#check class
+
+class(nflx$Date)
+```
+```{r}
+summary(nflx$Adj_Close)
+```
+
+
+## Check for Stationary
+```{r}
+#check time series plot
+ggplot(nflx, aes(Date, Adj_Close)) + geom_line(colour='blue') + ggtitle("Netflix Closing Stock Prices")+ geom_smooth(method = "lm", formula = y ~ x, colour='black', linetype = "dashed")
+
+```
+
+
+
+```{r}
+# check ACF plot
+ggAcf(nflx$Adj_Close, type='correlation')
+```
+
+
+
+```{r}
+#run ADF test
+adf.test(nflx$Adj_Close)
+```
+
+
+## Transforming for Stationary  and Identifying Model Parameters 
+```{r}
+#fit AR model
+ar.model <- auto.arima(nflx$Adj_Close, max.d = 0, max.q = 0, allowdrift = T)
+ar.model
+```
+
+
+```{r}
+# fit MA model
+ma.model <- auto.arima(nflx$Adj_Close, max.d = 0, max.p = 0, allowdrift = T)
+ma.model
+```
+
+
+```{r}
+#fit ARMA model
+arma.model2 <- auto.arima(nflx$Adj_Close, max.d = 0, allowdrift = T)
+arma.model2
+```
+
+
+```{r}
+#fit ARMA model
+arma.model <- auto.arima(nflx$Adj_Close, max.d = 0, allowdrift = T)
+arma.model
+```
+
+
+```{r}
+# fit ARIMA model
+arima.model <- auto.arima(nflx$Adj_Close, allowdrift = T)
+arima.model
+```
+
+## Checking the Residuals of the Model Fit
+
+```{r}
+# calculate residuals of each model
+ar.residual <- resid(ar.model)
+ma.residual <- resid(ma.model)
+arma.residual <- resid(arma.model)
+arima.residual <- resid(arima.model)
+```
+
+
+```{r}
+# plot PACF of each models residuals
+ggAcf(ar.residual, type = 'partial')
+ggAcf(ma.residual, type = 'partial')
+ggAcf(arma.residual, type = 'partial')
+ggAcf(arima.residual, type = 'partial')
+```
+
+
+```{r}
+#run the Ljung Box test on the residuals
+Box.test(ar.residual, type='Ljung-Box', lag=1)
+Box.test(ma.residual, type='Ljung-Box', lag=1)
+Box.test(arma.residual, type='Ljung-Box', lag=1)
+Box.test(arima.residual, type='Ljung-Box', lag=1)
+```
+
+## Making a Forecast of each Model
+
+```{r}
+# make forecast for each model
+ar.forecast <- forecast(ar.model, h=60, level= 90)
+ma.forecast <- forecast(ma.model, h=60, level= 90)
+arma.forecast <- forecast(arma.model, h=60, level= 90)
+arima.forecast <- forecast(arima.model, h=60, level= c(80, 95))
+```
+
+```{r}
+# plot forecast for each model
+g1 <- autoplot(ar.forecast)
+g2 <- autoplot(ma.forecast)
+g3 <- autoplot(arma.forecast)
+g4 <- autoplot(arima.forecast)
+grid.arrange(g1, g2, g3, g4, nrow=2, ncol=2)
+```
+```{r}
+g5 <- autoplot(arima.forecast) 
+g5
+```
+
+## Fitting Seasonal Trend Loess (STL) Decomposition Models
+```{r}
+# transform to time series object; need to specify frequency
+prices.ts <- ts(nflx$Adj_Close, frequency = 12)
+```
+
+```{r}
+# fit stl model
+stl.model <- stl(prices.ts, s.window = 'periodic')
+```
+
+
+```{r}
+# plot model fit
+autoplot(stl.model)
+```
+
+
+```{r}
+# make forecast
+stl.forecast <- forecast(stl.model, h=60, level=90)
+autoplot(stl.forecast)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
