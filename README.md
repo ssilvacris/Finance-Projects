@@ -6,7 +6,7 @@ This repository contains projects in Python and R, mainly in the area of finance
 
 Programming I create to show how to use Ipywidgets to visualize future value with different tax rates. You can see my article [here](https://bit.ly/352l9mc).
 
-## [Time Series - ARIMA](https://github.com/ssilvacris/Finance-Projects/upload/master)
+## [Time Series - ARIMA](https://github.com/ssilvacris/Finance-Projects/tree/master/ARIMA)
 
 The project shows important statiscal characteristics of a financial time series and how to forecast stock price movements.
 
