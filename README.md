@@ -6,6 +6,10 @@ This repository contains projects in Python and R, mainly in the area of finance
 
 Programming I create to show how to use Ipywidgets to visualize future value with different tax rates. You can see my article [here](https://bit.ly/352l9mc).
 
+## [Time Series - ARIMA]()
+
+The project shows important statiscal characteristics of a financial time series and how to forecast stock price movements.
+
 ## [Visualizing Tech Stocks](https://github.com/ssilvacris/Finance-Projects/blob/master/visualizing_tech_stocks_1.ipynb) 
 
 The Visualizing Tech Stocks is a project from Codecademy site. In this project the top 5 highest valued technology stocks were analyzed and visualized , as of the end of the first half of 2019: Microsoft (NASDAQ:MSFT), Amazon (NASDAQ:AMZN), Apple (NASDAQ:AAPL), Alphabet (NASDAQ:GOOG), and Facebook (NASDAQ:FB).
@@ -33,11 +37,6 @@ This project came from DataCamp course plataform.
 ## [Financial Concepts](https://github.com/ssilvacris/Finance-Projects/blob/master/Financial_Concepts-I.ipynb)
 
 Some codes about basic principles of finance essential for making important financial decisions.
-The examples are from DataCamp course.
-
-## [Time Series](https://github.com/ssilvacris/Finance-Projects/blob/master/Time_Series_2.ipynb)
-
-Programming about time series, using ARMA approach to predict climate change.
 The examples are from DataCamp course.
 
 
