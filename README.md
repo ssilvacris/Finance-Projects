@@ -2,7 +2,7 @@
 This repository contains projects in Python and R, mainly in the area of finance, financial modeling and statistics.
 
 
-## [Python and Ipywidgets to visualize future value with different tax rate](https://github.com/ssilvacris/Finance-Projects/blob/master/MEDIUM-002.ipynb)
+## [Python and Ipywidgets to visualize future value with different tax rate](ipywidgets-fv.ipynb)
 
 Programming I create to show how to use Ipywidgets to visualize future value with different tax rates. You can see my article [here](https://bit.ly/352l9mc).
 ![Future Value](ipywidget_fv.mov)
