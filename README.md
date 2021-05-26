@@ -8,6 +8,7 @@ Programming I create to show how to use Ipywidgets to visualize future value wit
 ![Future Value](ipywidget-fv.mov)
 
 ## [Time Series - ARIMA](https://github.com/ssilvacris/Finance-Projects/tree/master/ARIMA)
+you can see the project [here](https://nbviewer.jupyter.org/github/ssilvacris/Finance-Projects/blob/master/ARIMA/Time_Series.nb.html)
 
 The project shows important statiscal characteristics of a financial time series and how to forecast stock price movements.
 
